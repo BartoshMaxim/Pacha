@@ -1,0 +1,584 @@
+﻿
+@{
+    ViewBag.Title = "Pacha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="slider">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider-carousel" data-slide-to="1"></li>
+                        <li data-target="#slider-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="carousel-image" src="/Content/img/home/001.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="carousel-image" src="/Content/img/home/002.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="carousel-image" src="/Content/img/home/003.jpg" alt="">
+                        </div>
+                    </div>
+                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="left-sidebar">
+                    <h2>Рубрики</h2>
+                    <div class="panel-group category-products">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a href="#">Верхняя одежда</a>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#">Рубашки и блузки</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#">Брюки и шорты</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#">Платья</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#">Футболки и майки</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#">Кофты</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#">Аксессуары</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="#">Другие вещи</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search_box sidebar-search_box">
+                        <input type="text" placeholder="Поиск" />
+                    </div>
+                    <div class="brands_products">
+                        <h2>Брэнды</h2>
+                        <div class="brands-name">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li>
+                                    <label>
+                                        <input class="brands-name-checkbox pull-left" type="checkbox">
+                                        <span class="pull-left">Levi's</span>
+                                        <span class="pull-right">(32)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="brands-name-checkbox pull-left" type="checkbox">
+                                        <span class="pull-left">Chanel</span>
+                                        <span class="pull-right">(12)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="brands-name-checkbox pull-left" type="checkbox">
+                                        <span class="pull-left">Fendi</span>
+                                        <span class="pull-right">(45)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="brands-name-checkbox pull-left" type="checkbox">
+                                        <span class="pull-left">Furla</span>
+                                        <span class="pull-right">(7)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="brands-name-checkbox pull-left" type="checkbox">
+                                        <span class="pull-left">Diesel</span>
+                                        <span class="pull-right">(56)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="brands-name-checkbox pull-left" type="checkbox">
+                                        <span class="pull-left">Guess</span>
+                                        <span class="pull-right">(18)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="colors_products">
+                        <h2>Цвет</h2>
+                        <div class="colors-name">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li>
+                                    <label>
+                                        <input class="colors-name-checkbox pull-left" type="checkbox">
+                                        <span class="pull-left">Красный</span>
+                                        <span class="pull-right product-color"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="colors-name-checkbox pull-left" type="checkbox">
+                                        <span class="pull-left">Черный</span>
+                                        <span class="pull-right product-color"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input class="colors-name-checkbox pull-left" type="checkbox">
+                                        <span class="pull-left">Белый</span>
+                                        <span class="pull-right product-color"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="price-range">
+                        <h2>Цена</h2>
+                        <div class="well text-center">
+                            <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600"
+                                   data-slider-step="5" data-slider-value="[250,450]" id="sl2"><br />
+                            <b class="pull-left">0 грн</b> <b class="pull-right">600 грн</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 padding-right">
+                <div class="products">
+                    <h2 class="title text-center">Новинки</h2>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-product">
+                                <div class="product-info text-center">
+                                    <img class="single-product-image" src="/Content/img/home/product001.png" alt="" />
+                                    <h3>Chanel</h3>
+                                    <span class="price-amount">160 грн</span>
+                                    <a href="#" class="btn btn-default add-to-cart" data-toggle="modal"
+                                       data-target="#myModal">
+                                        <i class="fa fa-eye"></i>
+                                        Быстрый просмотр
+                                    </a>
+                                    <div id="myModal" class="modal fade" role="dialog">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <div class="text-right">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-2">
+                                                            <ul id="singleProductThumbnailsPager" class="single-product-thumbnails rslides_tabs rslides1_tabs">
+                                                                <li class="rslides1_s1">
+                                                                    <a href="#">
+                                                                        <img class="img-thumbnail" src="/Content/img/product-details/1.jpg" alt="">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="rslides1_s2">
+                                                                    <a href="#">
+                                                                        <img class="img-thumbnail" src="/Content/img/product-details/similar1.jpg" alt="">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="rslides1_s3 rslides_here">
+                                                                    <a href="#">
+                                                                        <img class="img-thumbnail" src="/Content/img/product-details/similar2.jpg" alt="">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="rslides1_s4">
+                                                                    <a href="#">
+                                                                        <img class="img-thumbnail" src="/Content/img/product-details/similar3.jpg" alt="">
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-sm-7">
+                                                            <ul class="single-product-large rslides rslides1" id="singleProductThumbnails">
+                                                                <li id="rslides1_s0" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out;">
+                                                                    <img class="center-block" src="/Content/img/product-details/1.jpg" alt="">
+                                                                </li>
+                                                                <li id="rslides1_s1" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out;" class="">
+                                                                    <img class="center-block" src="/Content/img/product-details/similar1.jpg" alt="">
+                                                                </li>
+                                                                <li id="rslides1_s2" style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; transition: opacity 500ms ease-in-out;" class="rslides1_on">
+                                                                    <img class="center-block" src="/Content/img/product-details/similar2.jpg" alt="">
+                                                                </li>
+                                                                <li id="rslides1_s3" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out;" class="">
+                                                                    <img class="center-block" src="/Content/img/product-details/similar3.jpg" alt="">
+                                                                </li>
+                                                            </ul><a href="#" class="rslides_nav rslides1_nav left control-single-product prev"><i class="fa fa-angle-left"></i></a><a href="#" class="rslides_nav rslides1_nav right control-single-product next"><i class="fa fa-angle-right"></i></a>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="row">
+                                                                <h4 class="text-center product-information-title">
+                                                                    Anne Klein Sleeveless Colorblock
+                                                                    Scuba
+                                                                </h4>
+                                                                <div class="product-price">
+                                                                    <span>459 грн</span>
+                                                                    <a href="#" class="btn btn-default add-to-cart">
+                                                                        <i class="fa fa-shopping-cart"></i>
+                                                                        Купить
+                                                                    </a>
+                                                                </div>
+                                                                <a href="#" class="btn btn-default add-to-cart">
+                                                                    <i class="fa fa-shopping-cart"></i>
+                                                                    Добавить в корзину
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h3>Chanel</h3>
+                                        <span class="price-amount">160 грн</span>
+                                        <a href="#" class="btn btn-default add-to-cart" data-toggle="modal"
+                                           data-target="#myModal">
+                                            <i class="fa fa-eye"></i>
+                                            Быстрый просмотр
+                                        </a>
+                                    </div>
+                                </div>
+                                <img src="/Content/img/home/new.png" class="new" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-product">
+                                <div class="product-info text-center">
+                                    <img class="single-product-image" src="/Content/img/home/product3.jpg" alt="" />
+                                    <h3>Chanel</h3>
+                                    <span class="price-amount">160 грн</span>
+                                    <a href="#" class="btn btn-default add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        Добавить в корзину
+                                    </a>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h3>Chanel</h3>
+                                        <span class="price-amount">160 грн</span>
+                                        <a href="#" class="btn btn-default add-to-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            Добавить в корзину
+                                        </a>
+                                    </div>
+                                </div>
+                                <img src="/Content/img/home/new.png" class="new" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-product">
+                                <div class="product-info text-center">
+                                    <img src="/Content/img/home/product001.png" alt="" />
+                                    <h3>Chanel</h3>
+                                    <span class="price-amount">160 грн</span>
+                                    <a href="#" class="btn btn-default add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        Добавить в корзину
+                                    </a>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h3>Chanel</h3>
+                                        <span class="price-amount">160 грн</span>
+                                        <a href="#" class="btn btn-default add-to-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            Добавить в корзину
+                                        </a>
+                                    </div>
+                                </div>
+                                <img src="/Content/img/home/new.png" class="new" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-product">
+                                <div class="product-info text-center">
+                                    <img src="/Content/img/home/product001.png" alt="" />
+                                    <h3>Chanel</h3>
+                                    <span class="price-amount">160 грн</span>
+                                    <a href="#" class="btn btn-default add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        Добавить в корзину
+                                    </a>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h3>Chanel</h3>
+                                        <span class="price-amount">160 грн</span>
+                                        <a href="#" class="btn btn-default add-to-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            Добавить в корзину
+                                        </a>
+                                    </div>
+                                </div>
+                                <img src="/Content/img/home/new.png" class="new" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-product">
+                                <div class="product-info text-center">
+                                    <img src="/Content/img/home/product001.png" alt="" />
+                                    <h3>Chanel</h3>
+                                    <span class="price-amount">160 грн</span>
+                                    <a href="#" class="btn btn-default add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        Добавить в корзину
+                                    </a>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h3>Chanel</h3>
+                                        <span class="price-amount">160 грн</span>
+                                        <a href="#" class="btn btn-default add-to-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            Добавить в корзину
+                                        </a>
+                                    </div>
+                                </div>
+                                <img src="/Content/img/home/new.png" class="new" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-product">
+                                <div class="product-info text-center">
+                                    <img src="/Content/img/home/product001.png" alt="" />
+                                    <h3>Chanel</h3>
+                                    <span class="price-amount">160 грн</span>
+                                    <a href="#" class="btn btn-default add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        Добавить в корзину
+                                    </a>
+                                </div>
+                                <div class="product-overlay">
+                                    <div class="overlay-content">
+                                        <h3>Chanel</h3>
+                                        <span class="price-amount">160 грн</span>
+                                        <a href="#" class="btn btn-default add-to-cart">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            Добавить в корзину
+                                        </a>
+                                    </div>
+                                </div>
+                                <img src="/Content/img/home/new.png" class="new" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products">
+                    <h2 class="title text-center">Скидки</h2>
+                    <div id="sale-products-carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-product">
+                                            <div class="product-info text-center">
+                                                <img src="/Content/img/home/recommend1.jpg" alt="" />
+                                                <h3>Polo Black</h3>
+                                                <span class="price-amount">546 грн</span>
+                                                <a href="#" class="btn btn-default add-to-cart">
+                                                    <i class="fa fa-shopping-cart"></i>Добавить в корзину
+                                                </a>
+                                            </div>
+                                            <div class="product-overlay">
+                                                <div class="overlay-content">
+                                                    <h3>Polo Black</h3>
+                                                    <span class="price-amount">546 грн</span>
+                                                    <a href="#" class="btn btn-default add-to-cart">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                        Добавить в корзину
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <img src="/Content/img/home/sale.png" class="sale" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-product">
+                                            <div class="product-info text-center">
+                                                <img src="/Content/img/home/recommend2.jpg" alt="" />
+                                                <h3>Polo Black</h3>
+                                                <span class="price-amount">546 грн</span>
+                                                <a href="#" class="btn btn-default add-to-cart">
+                                                    <i class="fa fa-shopping-cart"></i>Добавить в корзину
+                                                </a>
+                                            </div>
+                                            <div class="product-overlay">
+                                                <div class="overlay-content">
+                                                    <h3>Polo Black</h3>
+                                                    <span class="price-amount">546 грн</span>
+                                                    <a href="#" class="btn btn-default add-to-cart">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                        Добавить в корзину
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <img src="/Content/img/home/sale.png" class="sale" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-product">
+                                            <div class="product-info text-center">
+                                                <img src="/Content/img/home/recommend2.jpg" alt="" />
+                                                <h3>Polo Black</h3>
+                                                <span class="price-amount">546 грн</span>
+                                                <a href="#" class="btn btn-default add-to-cart">
+                                                    <i class="fa fa-shopping-cart"></i>Добавить в корзину
+                                                </a>
+                                            </div>
+                                            <div class="product-overlay">
+                                                <div class="overlay-content">
+                                                    <h3>Polo Black</h3>
+                                                    <span class="price-amount">546 грн</span>
+                                                    <a href="#" class="btn btn-default add-to-cart">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                        Добавить в корзину
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <img src="/Content/img/home/sale.png" class="sale" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-product">
+                                            <div class="product-info text-center">
+                                                <img src="/Content/img/home/recommend1.jpg" alt="" />
+                                                <h3>Polo Black</h3>
+                                                <span class="price-amount">546 грн</span>
+                                                <a href="#" class="btn btn-default add-to-cart">
+                                                    <i class="fa fa-shopping-cart"></i>Добавить в корзину
+                                                </a>
+                                            </div>
+                                            <div class="product-overlay">
+                                                <div class="overlay-content">
+                                                    <h3>Polo Black</h3>
+                                                    <span class="price-amount">546 грн</span>
+                                                    <a href="#" class="btn btn-default add-to-cart">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                        Добавить в корзину
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <img src="/Content/img/home/sale.png" class="sale" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-product">
+                                            <div class="product-info text-center">
+                                                <img src="/Content/img/home/recommend2.jpg" alt="" />
+                                                <h3>Polo Black</h3>
+                                                <span class="price-amount">546 грн</span>
+                                                <a href="#" class="btn btn-default add-to-cart">
+                                                    <i class="fa fa-shopping-cart"></i>Добавить в корзину
+                                                </a>
+                                            </div>
+                                            <div class="product-overlay">
+                                                <div class="overlay-content">
+                                                    <h3>Polo Black</h3>
+                                                    <span class="price-amount">546 грн</span>
+                                                    <a href="#" class="btn btn-default add-to-cart">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                        Добавить в корзину
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <img src="/Content/img/home/sale.png" class="sale" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-product">
+                                            <div class="product-info text-center">
+                                                <img src="/Content/img/home/recommend3.jpg" alt="" />
+                                                <h3>Polo Black</h3>
+                                                <span class="price-amount">546 грн</span>
+                                                <a href="#" class="btn btn-default add-to-cart">
+                                                    <i class="fa fa-shopping-cart"></i>Добавить в корзину
+                                                </a>
+                                            </div>
+                                            <div class="product-overlay">
+                                                <div class="overlay-content">
+                                                    <h3>Polo Black</h3>
+                                                    <span class="price-amount">546 грн</span>
+                                                    <a href="#" class="btn btn-default add-to-cart">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                        Добавить в корзину
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <img src="/Content/img/home/sale.png" class="sale" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left sale-products-control" href="#sale-products-carousel" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="right sale-products-control" href="#sale-products-carousel" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

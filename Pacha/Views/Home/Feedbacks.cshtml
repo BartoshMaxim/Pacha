@@ -1,0 +1,346 @@
+﻿
+@{
+    ViewBag.Title = "Отзывы | Pacha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section id="loginForm" class="login-form-section">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a href="home.html">Домой</a></li>
+                <li class="active">Отзывы</li>
+            </ol>
+        </div>
+    </div>
+</section>
+<section class="fb container">
+    <!-- Modal -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog fb_modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Ваш отзыв</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" action="">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="input-star" class="col-sm-2 control-label">Оценка</label>
+                                <div class="col-sm-10">
+                                    <input id="input-star" name="input-1" class="rating rating-loading" data-min="0"
+                                           data-max="5" data-step="1" data-size="xs">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="worth" class="col-sm-2 control-label">Достоинства</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="worth"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lack" class="col-sm-2 control-label">Недостаток</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="lack"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="coment" class="col-sm-2 control-label">Комментарий</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="coment"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default add-to-cart" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-default add-to-cart">Написать отзыв</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5 fb_sidebar-nav pull-right">
+            <div class="sidebar-nav-fixed affix">
+                <div class="fb_write">
+                    <button data-toggle="modal" data-target="#feedbackModal" class="btn btn-default add-to-cart btn-fb"
+                            type="button">
+                        Написать отзыв
+                    </button>
+                </div>
+                <div class="fb_all-rating">
+                    <div class="fb_show">Показать отзывы с оценкой</div>
+                    <div class="fb_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <span>85%</span>
+                        <a href="">124 отзывов</a>
+                    </div>
+                    <div class="fb_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>5%</span>
+                        <a href="">14 отзывов</a>
+                    </div>
+                    <div class="fb_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>85%</span>
+                        <a href="">124 отзывов</a>
+                    </div>
+                    <div class="fb_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>85%</span>
+                        <a href="">124 отзывов</a>
+                    </div>
+                    <div class="fb_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>85%</span>
+                        <a href="">124 отзывов</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="fb_header">
+                <div class="fb_all-value">
+                    Все отзывы <span class="fb_cur-value">3256</span>
+                </div>
+                <div class="fb_sort">Сортировать: <a class="active" href="">по дате</a> <a href="">по оценке</a></div>
+            </div>
+            <hr>
+            <div class="fb_main">
+                <div class="fb-user">
+                    <div class="fb-user_name">Яровой Владимир</div>
+                    <div class="fb-user_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <div>
+                            <strong>Достоинства:</strong> <br>
+                            Быстрая обработка заказа и доставка
+                        </div>
+                        <div>
+                            <strong>Недостатки</strong> <br>
+                            Не найдены
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong> <br>
+                            Довольна магазином. До этого брала подруга, нареканий никаких не было. Молодой человек
+                            доставил телефон по указанному адресу быстро, подождал пока я все проверю.
+                            Рада покупке, надеюсь, качество не подведет!
+                        </div>
+                    </div>
+                </div>
+                <div class="fb-user">
+                    <div class="fb-user_name">Писос</div>
+                    <div class="fb-user_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <div>
+                            <strong>Достоинства:</strong> <br>
+                            Быстрая обработка заказа и доставка
+                        </div>
+                        <div>
+                            <strong>Недостатки</strong> <br>
+                            магаз днище)))
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong> <br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ex exercitationem
+                            maxime necessitatibus numquam odit possimus? Dignissimos eaque est et fugit ipsum minus
+                            nihil nisi nobis non, quod, sapiente temporibus!
+                        </div>
+                    </div>
+                </div>
+                <div class="fb-user">
+                    <div class="fb-user_name">Писос</div>
+                    <div class="fb-user_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <div>
+                            <strong>Достоинства:</strong> <br>
+                            Быстрая обработка заказа и доставка
+                        </div>
+                        <div>
+                            <strong>Недостатки</strong> <br>
+                            магаз днище)))
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong> <br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ex exercitationem
+                            maxime necessitatibus numquam odit possimus? Dignissimos eaque est et fugit ipsum minus
+                            nihil nisi nobis non, quod, sapiente temporibus!
+                        </div>
+                    </div>
+                </div>
+                <div class="fb-user">
+                    <div class="fb-user_name">Писос</div>
+                    <div class="fb-user_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <div>
+                            <strong>Достоинства:</strong> <br>
+                            Быстрая обработка заказа и доставка
+                        </div>
+                        <div>
+                            <strong>Недостатки</strong> <br>
+                            магаз днище)))
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong> <br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ex exercitationem
+                            maxime necessitatibus numquam odit possimus? Dignissimos eaque est et fugit ipsum minus
+                            nihil nisi nobis non, quod, sapiente temporibus!
+                        </div>
+                    </div>
+                </div>
+                <div class="fb-user">
+                    <div class="fb-user_name">Писос</div>
+                    <div class="fb-user_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <div>
+                            <strong>Достоинства:</strong> <br>
+                            Быстрая обработка заказа и доставка
+                        </div>
+                        <div>
+                            <strong>Недостатки</strong> <br>
+                            магаз днище)))
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong> <br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ex exercitationem
+                            maxime necessitatibus numquam odit possimus? Dignissimos eaque est et fugit ipsum minus
+                            nihil nisi nobis non, quod, sapiente temporibus!
+                        </div>
+                    </div>
+                </div>
+                <div class="fb-user">
+                    <div class="fb-user_name">Писос</div>
+                    <div class="fb-user_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <div>
+                            <strong>Достоинства:</strong> <br>
+                            Быстрая обработка заказа и доставка
+                        </div>
+                        <div>
+                            <strong>Недостатки</strong> <br>
+                            магаз днище)))
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong> <br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ex exercitationem
+                            maxime necessitatibus numquam odit possimus? Dignissimos eaque est et fugit ipsum minus
+                            nihil nisi nobis non, quod, sapiente temporibus!
+                        </div>
+                    </div>
+                </div>
+                <div class="fb-user">
+                    <div class="fb-user_name">Писос</div>
+                    <div class="fb-user_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <div>
+                            <strong>Достоинства:</strong> <br>
+                            Быстрая обработка заказа и доставка
+                        </div>
+                        <div>
+                            <strong>Недостатки</strong> <br>
+                            магаз днище)))
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong> <br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ex exercitationem
+                            maxime necessitatibus numquam odit possimus? Dignissimos eaque est et fugit ipsum minus
+                            nihil nisi nobis non, quod, sapiente temporibus!
+                        </div>
+                    </div>
+                </div>
+                <div class="fb-user">
+                    <div class="fb-user_name">Писос</div>
+                    <div class="fb-user_rating">
+                        <i class="fa fa-star good-feedback" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <div>
+                            <strong>Достоинства:</strong> <br>
+                            Быстрая обработка заказа и доставка
+                        </div>
+                        <div>
+                            <strong>Недостатки</strong> <br>
+                            магаз днище)))
+                        </div>
+                        <div>
+                            <strong>Комментарий:</strong> <br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ex exercitationem
+                            maxime necessitatibus numquam odit possimus? Dignissimos eaque est et fugit ipsum minus
+                            nihil nisi nobis non, quod, sapiente temporibus!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="fb_more text-center">-->
+            <!--<button class="btn btn-default add-to-cart" type="button">Больше отзывов</button>-->
+            <!--</div>-->
+        </div>
+
+    </div>
+</section>

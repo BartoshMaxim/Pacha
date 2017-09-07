@@ -1,0 +1,222 @@
+﻿
+@{
+    ViewBag.Title = "Корзина | Pacha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="cart_items">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a href="home.html">Домой</a></li>
+                <li class="active">Корзина</li>
+            </ol>
+        </div>
+        <h2>Корзина</h2>
+        <div class="table-responsive cart-info col-sm-offset-2 col-sm-8">
+            <table class="table table-condensed">
+                <thead>
+                    <tr class="cart_menu">
+                        <td class="image">Товар</td>
+                        <td class="description">Описание</td>
+                        <td class="price">Цена</td>
+                        <td class="remove">Удалить из корзины</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cart_product">
+                            <a href="">
+                                <img src="/Content/img/cart/one.png" alt="">
+                            </a>
+                        </td>
+                        <td class="cart_description">
+                            <h4>
+                                <a href="">T-Shirt With Half Sleeve In Slim Fit</a>
+                            </h4>
+                            <p class="product-identifier">Web ID: 1089772</p>
+                        </td>
+                        <td class="cart_price">
+                            <p>699 грн</p>
+                        </td>
+                        <td class="cart_delete">
+                            <a class="cart_quantity_delete" href="">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cart_product">
+                            <a href="">
+                                <img src="/Content/img/cart/two.png" alt="">
+                            </a>
+                        </td>
+                        <td class="cart_description">
+                            <h4>
+                                <a href="">Wrap Front Pyjama</a>
+                            </h4>
+                            <p class="product-identifier">Web ID: 1089772</p>
+                        </td>
+                        <td class="cart_price">
+                            <p>458 грн</p>
+                        </td>
+                        <td class="cart_delete">
+                            <a class="cart_quantity_delete" href="">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cart_product">
+                            <a href="">
+                                <img src="/Content/img/cart/three.png" alt="">
+                            </a>
+                        </td>
+                        <td class="cart_description">
+                            <h4>
+                                <a href="">WEDDING Slim Suit in Blue</a>
+                            </h4>
+                            <p class="product-identifier">Web ID: 1089772</p>
+                        </td>
+                        <td class="cart_price">
+                            <p>1998 грн</p>
+                        </td>
+                        <td class="cart_delete">
+                            <a class="cart_quantity_delete" href="">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td>
+                            <span>К оплате:</span>
+                        </td>
+                        <td>
+                            <span class="total-price">2065 грн</span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</section>
+<section id="buy-action">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="heading">
+                    <h3>Оформить заказ</h3>
+                    <p>Выберите способ оплаты и доставки</p>
+                </div>
+                <form class="cart-form" action="">
+                    <div class="col-sm-7">
+                        <div class="form-wrapper">
+                            <div class="form-group">
+                                <label class="col-form-label" for="name">Имя и Фамилия</label>
+                                <input type="text" class="form-control" id="name" placeholder="Наталья Бородина"
+                                       required>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label" for="email">Email</label>
+                                <input type="email" class="form-control" id="email"
+                                       placeholder="example@example.com"
+                                       required>
+                                <small id="emailHelp" class="form-text text-muted">
+                                    Мы гарантируем, что не
+                                    передадим ваш
+                                    email
+                                    третьим лицам
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label" for="phone">Tелефон</label>
+                                <input type="tel" class="form-control" id="phone"
+                                       placeholder="+38-012-345-67-89"
+                                       required>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label" for="comment">Комментарий</label>
+                                <textarea class="form-control" id="comment" rows="3"
+                                          placeholder="Оставьте комментарий или примечание к заказу"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-wrapper">
+                            <div class="form-group" id="accordion">
+                                <p class="col-form-label">Доставка</p>
+                                <div class="radio">
+                                    <input type="radio" name="radio-delivery" id="delivery-newpost">
+                                    <label class="radio-button" for="delivery-newpost">Новая почта</label>
+                                    <article>
+                                        <div class="form-group input-group-sm">
+                                            <label for="newpost-city">Город</label>
+                                            <input type="text" class="form-control" id="newpost-city"
+                                                   placeholder="Киев">
+                                        </div>
+                                        <div class="form-group input-group-sm">
+                                            <label for="newpost-department">Номер отделения</label>
+                                            <input type="text" class="form-control" id="newpost-department"
+                                                   placeholder="116">
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="radio-delivery" id="delivery-ukrpost">
+                                    <label class="radio-button" for="delivery-ukrpost">УкрПошта</label>
+                                    <article>
+                                        <div class="form-group input-group-sm">
+                                            <label for="street">Улица</label>
+                                            <input type="text" class="form-control" id="street"
+                                                   placeholder="пр-т Юбилейный, д. 17, кв. 23">
+                                        </div>
+                                        <div class="form-group input-group-sm">
+                                            <label for="city">Город</label>
+                                            <input type="text" class="form-control" id="city"
+                                                   placeholder="Киев">
+                                        </div>
+                                        <div class="form-group input-group-sm">
+                                            <label for="index">Индекс</label>
+                                            <input type="text" class="form-control" id="index"
+                                                   placeholder="123456">
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="radio-delivery" id="delivery-self">
+                                    <label class="radio-button" for="delivery-self">Самовывоз</label>
+                                    <article>
+                                        <p>Мы свяжемся с Вами, для утверждения времени и места встречи</p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="col-form-label">Оплата</p>
+                                <div class="radio">
+                                    <input type="radio" name="radio-pay" id="pay-bank">
+                                    <label class="radio-button" for="pay-bank">Банковский перевод</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="radio-pay" id="pay-cash">
+                                    <label class="radio-button" for="pay-cash">Наличными</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="radio-pay" id="pay-web">
+                                    <label class="radio-button" for="pay-web">WebMoney</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="radio-pay" id="pay-qiwi">
+                                    <label class="radio-button" for="pay-qiwi">Qiwi</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn submit" href="">Подтвердить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,332 @@
+﻿@model Pacha.Models.ApplicationUser
+@{
+    ViewBag.Title = "Личный кабинет | Pacha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="profile-user" class="profile-section">
+    <div class="container">
+        <div class="container">
+            <div class="breadcrumbs">
+                <ol class="breadcrumb">
+                    <li><a href="home.html">Домой</a></li>
+                    <li class="active">Личный кабинет</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Личный кабинет</h2>
+            <div class="col-sm-2 col-sm-offset-2">
+                <img class="img-responsive img-circle img-profile" src="images/avatar.png" alt="" width="150">
+            </div>
+            <div class="col-sm-3 profile-user-information-wrapper">
+                <p class="profile-user-information">
+                    <span>Имя:</span>
+                    @Model.FirstName
+                </p>
+                <p class="profile-user-information">
+                    <span>Фамилия:</span>
+                    @Model.SecondName
+                </p>
+                <p class="profile-user-information">
+                    <span>Email:</span>
+                    @Model.Email
+                </p>
+            </div>
+            <div class="col-sm-3 profile-user-information-wrapper prof-user-center">
+                <button type="submit" class="btn submit profile-button" href="">Изменить данные</button>
+                <a role="button" class="btn submit profile-button" href="cart.html">Перейти к покупкам</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 cart-info table-responsive">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr class="cart_menu">
+                            <td class="image">Товар</td>
+                            <td class="description">Описание</td>
+                            <td class="price">Цена</td>
+                            <td class="remove">Удалить из корзины</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cart_product">
+                                <a href="">
+                                    <img src="images/cart/one.png" alt="">
+                                </a>
+                            </td>
+                            <td class="cart_description">
+                                <h4>
+                                    <a href="">T-Shirt With Half Sleeve In Slim Fit</a>
+                                </h4>
+                                <p class="product-identifier">Web ID: 1089772</p>
+                            </td>
+                            <td class="cart_price">
+                                <p>699 грн</p>
+                            </td>
+                            <td class="cart_delete">
+                                <a class="cart_quantity_delete" href="">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cart_product">
+                                <a href="">
+                                    <img src="images/cart/two.png" alt="">
+                                </a>
+                            </td>
+                            <td class="cart_description">
+                                <h4>
+                                    <a href="">Wrap Front Pyjama</a>
+                                </h4>
+                                <p class="product-identifier">Web ID: 1089772</p>
+                            </td>
+                            <td class="cart_price">
+                                <p>458 грн</p>
+                            </td>
+                            <td class="cart_delete">
+                                <a class="cart_quantity_delete" href="">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cart_product">
+                                <a href="">
+                                    <img src="images/cart/three.png" alt="">
+                                </a>
+                            </td>
+                            <td class="cart_description">
+                                <h4>
+                                    <a href="">WEDDING Slim Suit in Blue</a>
+                                </h4>
+                                <p class="product-identifier">Web ID: 1089772</p>
+                            </td>
+                            <td class="cart_price">
+                                <p>1998 грн</p>
+                            </td>
+                            <td class="cart_delete">
+                                <a class="cart_quantity_delete" href="">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>
+                                <span>К оплате:</span>
+                            </td>
+                            <td>
+                                <span class="total-price">2065 грн</span>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="products">
+            <h2 class="title text-center">Ваши покупки</h2>
+            <div id="sale-products-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-product">
+                                    <div class="product-info text-center">
+                                        <img src="images/home/recommend1.jpg" alt="" />
+                                        <h3>Polo Black</h3>
+                                        <span class="price-amount">546 грн</span>
+                                        <span class="btn btn-default add-to-cart">
+                                            <span class="fa-stack">
+                                                <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                                                <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                                            </span>
+                                            Товар куплен
+                                        </span>
+                                    </div>
+                                    <img src="/Content/img/home/sold.png" class="sale" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-product">
+                                    <div class="product-info text-center">
+                                        <img src="/Content/img/home/recommend2.jpg" alt="" />
+                                        <h3>Polo Black</h3>
+                                        <span class="price-amount price-sell">546 грн</span>
+                                        <a href="#" class="btn btn-default add-to-cart">
+                                            <span class="fa-stack">
+                                                <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                                                <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                                            </span>
+                                            Товар куплен
+                                        </a>
+                                    </div>
+                                    <img src="/Content/img/home/sold.png" class="sale" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-product">
+                                    <div class="product-info text-center">
+                                        <img src="/Content/img/home/recommend2.jpg" alt="" />
+                                        <h3>Polo Black</h3>
+                                        <span class="price-amount">546 грн</span>
+                                        <a href="#" class="btn btn-default add-to-cart">
+                                            <span class="fa-stack">
+                                                <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                                                <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                                            </span>
+                                            Товар куплен
+                                        </a>
+                                    </div>
+                                    <div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <h3>Polo Black</h3>
+                                            <span class="price-amount">546 грн</span>
+                                            <a href="#" class="btn btn-default add-to-cart">
+                                                <span class="fa-stack">
+                                                    <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                                                    <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                                                </span>
+                                                Товар куплен
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/home/sold.png" class="sale" alt="" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-product">
+                                    <div class="product-info text-center">
+                                        <img src="/Content/img/home/recommend1.jpg" alt="" />
+                                        <h3>Polo Black</h3>
+                                        <span class="price-amount">546 грн</span>
+                                        <a href="#" class="btn btn-default add-to-cart">
+                                            <span class="fa-stack">
+                                                <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                                                <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                                            </span>
+                                            Товар куплен
+                                        </a>
+                                    </div>
+                                    <div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <h3>Polo Black</h3>
+                                            <span class="price-amount">546 грн</span>
+                                            <a href="#" class="btn btn-default add-to-cart">
+                                                <span class="fa-stack">
+                                                    <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                                                    <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                                                </span>
+                                                Товар куплен
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/home/sold.png" class="sale" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-product">
+                                    <div class="product-info text-center">
+                                        <img src="/Content/img/home/recommend2.jpg" alt="" />
+                                        <h3>Polo Black</h3>
+                                        <span class="price-amount">546 грн</span>
+                                        <a href="#" class="btn btn-default add-to-cart">
+                                            <span class="fa-stack">
+                                                <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                                                <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                                            </span>
+                                            Товар куплен
+                                        </a>
+                                    </div>
+                                    <div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <h3>Polo Black</h3>
+                                            <span class="price-amount">546 грн</span>
+                                            <a href="#" class="btn btn-default add-to-cart">
+                                                <span class="fa-stack">
+                                                    <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                                                    <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                                                </span>
+                                                Товар куплен
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/home/sold.png" class="sale" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-product">
+                                    <div class="product-info text-center">
+                                        <img src="/Content/img/home/recommend3.jpg" alt="" />
+                                        <h3>Polo Black</h3>
+                                        <span class="price-amount">546 грн</span>
+                                        <a href="#" class="btn btn-default add-to-cart">
+                                            <span class="fa-stack">
+                                                <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                                                <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                                            </span>
+                                            Товар куплен
+                                        </a>
+                                    </div>
+                                    <div class="product-overlay">
+                                        <div class="overlay-content">
+                                            <h3>Polo Black</h3>
+                                            <span class="price-amount">546 грн</span>
+                                            <a href="#" class="btn btn-default add-to-cart">
+                                                <span class="fa-stack">
+                                                    <i class="fa fa-shopping-cart fa-stack-1x"></i>
+                                                    <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                                                </span>
+                                                Товар куплен
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <img src="/Content/img/home/sold.png" class="sale" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left sale-products-control" href="#sale-products-carousel" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="right sale-products-control" href="#sale-products-carousel" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row profile-feedback-area">
+            <div class="col-sm-8 col-sm-offset-2">
+                <form action="">
+                    <div class="col-md-8">
+                        <textarea name="" id="profile-feedback" rows="5"
+                                  placeholder="Оставьте Ваш отзыв о магазине..."></textarea>
+                    </div>
+                    <div class="col-md-4 prof-user-center">
+                        <button type="submit" class="btn submit profile-feedback-button" href="">
+                            Оставить
+                            отзыв
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

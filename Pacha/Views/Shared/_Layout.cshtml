@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/font-awesome.min.css">
+    <link rel="stylesheet" href="/Content/prettyPhoto.css">
+    <link rel="stylesheet" href="/Content/price-range.css">
+    <link rel="stylesheet" href="/Content/animate.css">
+    <link rel="stylesheet" href="/Content/style.css">
+    <link rel="stylesheet" href="/Content/responsive.css">
+    <!--[if lt IE 9]>
+    <script src="/Content/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header id="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="contact-phones pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><i class="fa fa-phone"></i>+38-123-456-78-90</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+38-123-456-78-90</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+38-123-456-78-90</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="logo pull-right">
+                            <a href="@Url.Action("Index","Home")">
+                                <h1 class="pacha-logo">Pacha</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navigation-menu pull-right">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li>
+                                    <a href="@Url.Action("Delivery","Home")">
+                                        <!--<i class="fa fa-truck"></i>-->
+                                        Доставка
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Paying","Home")">
+                                        <!--<i class="fa fa-usd"></i>-->
+                                        Оплата
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Feedbacks","Home")">
+                                        <!--<i class="fa fa-comments"></i>-->
+                                        Отзывы
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("About","Home")">
+                                        <!--<i class="fa fa-info"></i>-->
+                                        О Магазине
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Cart","Home")">
+                                        <!--<i class="fa fa-shopping-cart"></i>-->
+                                        Корзина
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Profile","Home")">
+                                        <!--<i class="fa fa-user"></i>-->
+                                        Личный кабинет
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer id="footer" class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div id="feedbacks-carousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="col-xs-3">
+                                        <img class="img-circle img-responsive" src="/Content/img/blog/blog-one.jpg" alt="">
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <span class="feedback_name">Наталья Красновская</span>
+                                        <p class="feedback_comment">
+                                            Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing
+                                            elit. Aliquam animi deleniti
+                                            dicta dolorum illum, iusto minus quidem sed tempora
+                                            voluptatibus.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-3">
+                                        <img class="img-circle img-responsive" src="/Content/img/blog/blog-three.jpg" alt="">
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <span class="feedback_name">Наталья Красновская</span>
+                                        <p class="feedback_comment">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Aliquam animi deleniti
+                                            dicta dolorum illum, iusto minus quidem sed tempora voluptatibus.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-xs-3">
+                                        <img class="img-circle img-responsive" src="/Content/img/blog/blog-two.jpg" alt="">
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <span class="feedback_name">Наталья Красновская</span>
+                                        <p class="feedback_comment">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Aliquam animi deleniti
+                                            dicta dolorum illum, iusto minus quidem sed tempora voluptatibus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="logo pull-right">
+                            <a href="@Url.Action("Index","Home")">
+                                <h1 class="pacha-logo">Pacha</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-10 hidden-xs">
+                        <div class="navigation-menu pull-right">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li>
+                                    <a href="@Url.Action("Delivery","Home")">
+                                        <!--<i class="fa fa-truck"></i>-->
+                                        Доставка
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Paying","Home")">
+                                        <!--<i class="fa fa-usd"></i>-->
+                                        Оплата
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Feedbacks","Home")">
+                                        <!--<i class="fa fa-comments"></i>-->
+                                        Отзывы
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("About","Home")">
+                                        <!--<i class="fa fa-info"></i>-->
+                                        О Магазине
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Cart","Home")">
+                                        <!--<i class="fa fa-shopping-cart"></i>-->
+                                        Корзина
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Profile","Home")">
+                                        <!--<i class="fa fa-user"></i>-->
+                                        Личный кабинет
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Scripts/jquery.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery.scrollUp.min.js"></script>
+    <script src="/Scripts/price-range.js"></script>
+    <script src="/Scripts/jquery.prettyPhoto.js"></script>
+    <script src="/Scripts/main.js"></script>
+    <script src="/Scripts/responsiveslides.js"></script>
+    <script src="/Scripts/responsiveslides-init.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
