@@ -48,7 +48,10 @@ namespace Pacha.Controllers
                 ApplicationUser user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, SecondName = model.SecondName };
                 IdentityResult result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
+                {
+                    await UserManager.AddToRoleAsync(user.Id, "user");
                     return RedirectToAction("Index", "Home");
+                }
                 else
                 {
                     foreach (string error in result.Errors)
@@ -103,6 +106,8 @@ namespace Pacha.Controllers
                     }
                     ClaimsIdentity claim = await UserManager.CreateIdentityAsync(user,
                         DefaultAuthenticationTypes.ApplicationCookie);
+
+                    
                     AuthenticationManager.SignOut();
                     AuthenticationManager.SignIn(new AuthenticationProperties
                     {
@@ -142,6 +147,12 @@ namespace Pacha.Controllers
             {
                 return RedirectToAction("Confirm", "Account", new { Email = "" });
             }
+        }
+
+        public ActionResult LogOut()
+        {
+            AuthenticationManager.SignOut();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

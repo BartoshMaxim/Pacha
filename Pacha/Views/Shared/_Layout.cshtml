@@ -90,6 +90,14 @@
                                         Личный кабинет
                                     </a>
                                 </li>
+                                @if (Request.IsAuthenticated)
+                                {
+                                    <li>
+                                        <a href="@Url.Action("LogOut","Account")">
+                                            Выйти
+                                        </a>
+                                    </li>
+                                }
                             </ul>
                         </div>
                     </div>

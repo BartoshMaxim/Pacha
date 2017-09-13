@@ -3,10 +3,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
 
 namespace Pacha.Models
 {
@@ -15,16 +12,24 @@ namespace Pacha.Models
         public string FirstName { get; set; }
         public string SecondName { get; set; }
     }
-
+    
     public class ApplicationContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationContext() : base("DefaultConnection") { }
+
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Brand> Brands { get; set; }
+
+        public DbSet<Image> Images { get; set; }
 
         public static ApplicationContext Create()
         {
             return new ApplicationContext();
         }
-    } 
+    }
 
     public class AppDbInitiatializer : DropCreateDatabaseAlways<ApplicationContext>
     {
